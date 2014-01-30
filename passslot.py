@@ -94,6 +94,15 @@ class PassSlot(object):
         self.__call('post', resource, content)
         return True
     
+    def update_pass_values(self, pspass, values):
+        resource = "/passes/%s/%s/values" % (pspass.passTypeIdentifier, pspass.serialNumber)
+        return self.__call('put', resource, values)
+
+    def update_pass_value(self, pspass, placeholderName, value):
+        resource = "/passes/%s/%s/values/%s" % (pspass.passTypeIdentifier, pspass.serialNumber, placeholderName)
+        content = {'value': value}
+        return self.__call('put', resource, content)
+   
     def __call(self, method, resource, content=None, multipart=False):
 
         headers = {
