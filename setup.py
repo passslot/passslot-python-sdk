@@ -19,7 +19,7 @@ with open('LICENSE.txt') as f:
 install_requires = ['requests >= 2.1']
 if sys.version_info < (3, 2):
     # This is required for SNI support in python < 3.2
-    install_requires.append('pyOpenSSL')
+    install_requires.append('pyOpenSSL >= 0.13')
     install_requires.append('ndg-httpsclient')
     install_requires.append('pyasn1')
     
