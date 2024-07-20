@@ -20,3 +20,7 @@ pspass = engine.create_pass_from_template(<Template ID>)
 print(pspass.url)
 ```
 (Assuming you have already setup a template that does not require any values)
+
+More explanations and code examples in the wiki
+----
+For detailed explanations and code samples, please visit the [wiki](https://github.com/passslot/passslot-python-sdk/wiki) page which provides additional information and guidance.
